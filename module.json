@@ -5,5 +5,8 @@
   "author": "Eva",
   "version": "1.0.0",
   "minimumCoreVersion": "0.7.8",
-  "scripts": ["scripts/DragAndDrop.js"]
+  "scripts": ["scripts/DragAndDrop.js"],
+  "url": "https://github.com/EvanesceExotica/DragDropIntoJournal",
+  "manifest": "https://raw.githubusercontent.com/EvanesceExotica/DragDropIntoJournal/master/module.json",
+  "download": "https://github.com/EvanesceExotica/DragDropIntoJournal/archive/refs/heads/master.zip"
 }
