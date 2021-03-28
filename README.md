@@ -31,6 +31,6 @@ Copy and paste the manifest url into your Foundry Installation.
 
 Steps 4 - 6 should make it so the images are 'saved' within the journal entry even if you refresh. They will remain, and you can go in and edit the journal entry again, copy-paste the images with CTRL+X, CTRL+V, resize and rearrange them, add text, etc.
 
-Here's a gif demonstration:
+Here's a link to a video demonstration:
+https://streamable.com/ui9idy 
 
-!["Demonstration"](https://media2.giphy.com/media/TeOpyQHhVvSlmamVpE/giphy.gif)
