@@ -13,7 +13,13 @@ For now I've hit a bit of a wall in trying to figure out improvements for this a
 
 ## Install Instructions
 
-Copy and paste the manifest url into your Foundry Installation.
+1. Go to Add-on Modules in the "Configuration and Setup" screen in Foundry VTT.
+2. Click "Install Module".
+3. Copy and paste this manifest url into the space at the bottom of the window where it says Manifest URL: https://raw.githubusercontent.com/EvanesceExotica/DragDropIntoJournal/master/module.json
+3. Click "Install".
+
+-----
+
 
 ## Instructions
 
