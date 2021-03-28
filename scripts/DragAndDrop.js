@@ -30,16 +30,11 @@ function addImage(app, url, currentJournalId) {
 
 }
 
-function addImageToJournal(app, url) {
-	app.object.data.content += "<img src=" + url + ">";
-}
-
 async function handleDrop(app, event, currentJournalId) {
 	console.log("Dropping image");
 	event.preventDefault();
 
 	var files = event.dataTransfer.files;
-	console.log(files)
 	for(let f of files){
 		checkSource(app, f, currentJournalId);
 	}
@@ -52,15 +47,12 @@ async function handleDrop(app, event, currentJournalId) {
 async function checkSource(app, file, currentJournalId) {
 	var source = "data";
 	let response;
-	console.log(file)
 	if (file.isExternalUrl) {
 		response = {
 			path: file.url
 		}
-		console.log("External Url Response path is " + response.path)
 	} else {
-		response = await FilePicker.upload(source, "tokens", file, {});
-		console.log("ELSE Response path is " + response.path)
+		response = await FilePicker.upload(source, game.settings.get("DragDropIntoJournal", "imageSaveLocation"), file, {});
 	}
 	addImage(app, response.path, currentJournalId);
 
@@ -77,4 +69,15 @@ Hooks.on("renderJournalSheet", (app, html, options) => {
 	 	handleDrop(app, event, currentJournalId);
 
 	 });
+});
+
+Hooks.once('init', async function(){
+game.settings.register("DragDropIntoJournal", "imageSaveLocation", {
+	name: "Image Save Location",
+	hint: "Where in your Data folder would you like to save the images you drag into journal entries? Input the file path to your prefered folder here.",
+	scope: "client",
+	config: true,
+	type: String,
+	default: ""
+});
 });
