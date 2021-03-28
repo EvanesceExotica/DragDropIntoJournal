@@ -2,6 +2,8 @@
 
 A solution made to make adding multiple images to journal entries easier, to work along with my [Journal-to-Canvas-Slideshow](https://github.com/EvanesceExotica/Journal-To-Canvas-Slideshow) module. 
 
+(Scroll to the bottom for the instructions, but please read the notes below for important information)
+
 ----
 **Important Note**: This is a hacky solution, not thoroughly tested, and definitely not a finished module. It also doesn't currently work with video files (though I may add that later when I have time). I also do not know if it will work with the Forge.
 
