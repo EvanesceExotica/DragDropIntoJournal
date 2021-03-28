@@ -41,11 +41,16 @@ async function handleDrop(app, event, currentJournalId) {
 	// file = files[0];
 	// checkSource(app, file, currentJournalId);
 }
-//tweaked these methods from DragUpload by cswendrowski
+//implemented and tweaked these methods from DragUpload by cswendrowski
 //https://github.com/cswendrowski/FoundryVTT-Drag-Upload/blob/master/dragupload.js
 
 async function checkSource(app, file, currentJournalId) {
-	var source = "data";
+	if (typeof ForgeVTT != "undefined" && ForgeVTT.usingTheForge) {
+        source = "forgevtt";
+    }
+	else{
+		var source = "data";
+	}
 	let response;
 	if (file.isExternalUrl) {
 		response = {
